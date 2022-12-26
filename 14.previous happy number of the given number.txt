@@ -1,0 +1,29 @@
+#previous happy number of the given number
+def happynumber(n):
+    total=n
+    i=n
+    while total>9:
+        total=0
+        while i>0:
+            rem=i%10
+            total+=rem*rem
+            i//=10
+        if total==1:
+            return True
+        i=total
+    if total==7:
+        return True
+    return False
+num=int(input("enter the number"))
+j=num-1
+while j>0:
+    if happynumber(j):
+        print(j)
+        break
+    else:
+        j=j-1
+    
+        
+            
+        
+        
